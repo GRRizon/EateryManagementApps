@@ -10,7 +10,6 @@ public class EateryManagementApps extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        // এখানে path ঠিক মতো দিতে হবে
         Parent root = FXMLLoader.load(getClass().getResource("/eaterymanagementapps/login.fxml"));
 
         primaryStage.setTitle("Eatery Management System");
