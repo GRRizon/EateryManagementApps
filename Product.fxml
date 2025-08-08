@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eaterymanagementapps.ProductController">
+
+    <children>
+        <AnchorPane id="AnchorPane" layoutY="-7.0" prefHeight="400.0" prefWidth="600.0" styleClass="gradient" stylesheets="@loginDesign.css">
+
+            <children>
+
+                <!-- Product Table -->
+                <TableView fx:id="tvProducts" layoutX="209.0" layoutY="6.0" onMouseClicked="#onMouseClick" prefHeight="414.0" prefWidth="391.0" styleClass="white-form" stylesheets="@loginDesign.css">
+
+                    <columns>
+                        <TableColumn fx:id="colID" prefWidth="65.0" text="ID" />
+                        <TableColumn fx:id="colName" prefWidth="187.0" text="Name" />
+                        <TableColumn fx:id="colPrice" prefWidth="65.0" text="Price" />
+                        <TableColumn fx:id="colQuantity" prefWidth="73.0" text="Quantity" />
+                    </columns>
+                </TableView>
+
+                <!-- Labels -->
+                <VBox layoutX="10.0" layoutY="81.0" prefHeight="128.0" prefWidth="46.0" spacing="28.0">
+                    <children>
+                        <Label text="ID">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Label>
+                        <Label text="Name" />
+                        <Label text="Price" />
+                        <Label prefHeight="18.0" prefWidth="52.0" text="Quantity">
+                            <font>
+                                <Font size="10.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </VBox>
+
+                <!-- Input Fields -->
+                <VBox layoutX="65.0" layoutY="80.0" prefHeight="128.0" prefWidth="124.0" spacing="18.0">
+                    <children>
+                        <TextField fx:id="tfID" styleClass="textfield" stylesheets="@loginDesign.css" />
+                        <TextField fx:id="tfName" styleClass="textfield" stylesheets="@loginDesign.css" />
+                        <TextField fx:id="tfPrice" prefHeight="25.0" prefWidth="103.0" styleClass="textfield" stylesheets="@loginDesign.css" />
+                        <TextField fx:id="tfQuantity" prefHeight="25.0" prefWidth="103.0" styleClass="textfield" stylesheets="@loginDesign.css" />
+                    </children>
+                </VBox>
+
+                <!-- Buttons -->
+                <Button fx:id="btnInsert" layoutX="10.0" layoutY="278.0" mnemonicParsing="false" onAction="#handleButtonAction" styleClass="create-btn" stylesheets="@loginDesign.css" text="Insert" />
+
+                <Button fx:id="btnUpdate" layoutX="70.0" layoutY="278.0" mnemonicParsing="false" onAction="#handleButtonAction" styleClass="create-btn" stylesheets="@loginDesign.css" text="Update" />
+
+                <Button fx:id="btnDelete" layoutX="139.0" layoutY="278.0" mnemonicParsing="false" onAction="#handleButtonAction" styleClass="create-btn" stylesheets="@loginDesign.css" text="Delete" />
+
+                <!-- Header -->
+                <Label layoutX="5.0" layoutY="14.0" prefHeight="54.0" prefWidth="189.0" styleClass="head-label" stylesheets="@loginDesign.css" text="Available Product">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                </Label>
+
+                <!-- Logout -->
+                <Button fx:id="btnLogout" layoutX="73.0" layoutY="347.0" mnemonicParsing="false" onAction="#handleButtonAction" styleClass="login-btn" stylesheets="@loginDesign.css" text="Log Out" />
+
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
