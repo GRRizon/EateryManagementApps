@@ -1,0 +1,24 @@
+package eaterymanagementapps;
+
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+public class EateryManagementApps extends Application {
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        // এখানে path ঠিক মতো দিতে হবে
+        Parent root = FXMLLoader.load(getClass().getResource("/eaterymanagementapps/login.fxml"));
+
+        primaryStage.setTitle("Eatery Management System");
+        primaryStage.setScene(new Scene(root));
+        primaryStage.show();
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
